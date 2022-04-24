@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Dolapo115/React-JS-Spotify-Clone/static/css/main.685fff80.chunk.css",
+    "main.js": "/Dolapo115/React-JS-Spotify-Clone/static/js/main.3c226d86.chunk.js",
+    "main.js.map": "/Dolapo115/React-JS-Spotify-Clone/static/js/main.3c226d86.chunk.js.map",
+    "runtime-main.js": "/Dolapo115/React-JS-Spotify-Clone/static/js/runtime-main.2e745048.js",
+    "runtime-main.js.map": "/Dolapo115/React-JS-Spotify-Clone/static/js/runtime-main.2e745048.js.map",
+    "static/js/2.c8dbbe48.chunk.js": "/Dolapo115/React-JS-Spotify-Clone/static/js/2.c8dbbe48.chunk.js",
+    "static/js/2.c8dbbe48.chunk.js.map": "/Dolapo115/React-JS-Spotify-Clone/static/js/2.c8dbbe48.chunk.js.map",
+    "index.html": "/Dolapo115/React-JS-Spotify-Clone/index.html",
+    "static/css/main.685fff80.chunk.css.map": "/Dolapo115/React-JS-Spotify-Clone/static/css/main.685fff80.chunk.css.map",
+    "static/js/2.c8dbbe48.chunk.js.LICENSE.txt": "/Dolapo115/React-JS-Spotify-Clone/static/js/2.c8dbbe48.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e745048.js",
+    "static/js/2.c8dbbe48.chunk.js",
+    "static/css/main.685fff80.chunk.css",
+    "static/js/main.3c226d86.chunk.js"
+  ]
+}
