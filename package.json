@@ -1,6 +1,5 @@
 {
   "name": "react_spotify_clone",
-  "homepage": "https://github.com/Dolapo115/React-JS-Spotify-Clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
