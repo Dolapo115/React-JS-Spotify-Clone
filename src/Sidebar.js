@@ -20,16 +20,16 @@ function Sidebar(){
       />
 
       <div className="options-div">
-        <SidebarOption Icon={HomeIcon} title={"Home"} />
-        <SidebarOption Icon={SearchIcon} title={"Search"} />
-        <SidebarOption Icon={LibraryMusicIcon} title={"Your Library"} />
+        <SidebarOption Icon={HomeIcon} option={"Home"} />
+        <SidebarOption Icon={SearchIcon} option={"Search"} />
+        <SidebarOption Icon={LibraryMusicIcon} option={"Your Library"} />
       </div>
 
       <strong className="sidebar-title">PLAYLISTS</strong>
       <hr />
 
       {playlists?.items?.map((item)=>{
-          return <SidebarOption title={item.name} />
+          return <SidebarOption option={item.name} />
 
       })}
       

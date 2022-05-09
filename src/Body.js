@@ -11,6 +11,45 @@ function Body( {spotify} ){
 
     const [{discover_weekly, user}, dispatch] = useData()
 
+    const playPlaylist = (id) => {
+      spotify
+        .play({
+          context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        })
+        .then((res) => {
+          spotify.getMyCurrentPlayingTrack().then((r) => {
+            dispatch({
+              type: "SET_ITEM",
+              item: r.item,
+            });
+            dispatch({
+              type: "SET_PLAYING",
+              playing: true,
+            });
+          });
+        });
+    };
+
+    const playSong = (id) => {
+      spotify
+        .play({
+          uris: [`spotify:track:${id}`],
+        })
+        .then((res) => {
+          spotify.getMyCurrentPlayingTrack().then((r) => {
+            dispatch({
+              type: "SET_ITEM",
+              item: r.item,
+            });
+            dispatch({
+              type: "SET_PLAYING",
+              playing: true,
+            });
+          });
+        });
+    };
+
+
     return (
       <div className="body-main">
         <Header spotify={spotify} />
@@ -20,17 +59,17 @@ function Body( {spotify} ){
           <div className="body-infotext">
             <strong>PLAYLIST</strong>
             <h2>Discover Weekly</h2>
-            <p>{discover_weekly?.description}</p>
+            <p>{discover_weekly?.description || 'Your weekly mixtape of fresh music. Enjoy new music, picked just for you. Updates every Monday'}</p>
           </div>
         </div>
         <div className="body-icons">
-          <PlayCircleFilledIcon className="body-shuffle" />
+          <PlayCircleFilledIcon className="body-shuffle" onClick = {playPlaylist}/>
           <FavoriteIcon className="favorite-icon" fontSize="large" />
           <MoreHorizIcon />
         </div>
-        <div className="body_songs">
+        <div className="body-songs">
           {discover_weekly?.tracks.items.map((song) => (
-            <SongRow track={song.track} />
+            <SongRow track={song.track} playSong = {playSong}/>
           ))}
         </div>
       </div>
